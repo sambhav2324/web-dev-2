@@ -43,11 +43,39 @@
 // }
 // first()
 
-let total = 100
+// let total = 100
 
-function calculate(){
-    console.log(total)
-    let total=100
-}
-calculate()
+// function calculate(){
+//     console.log(total)
+//     let total=100
+// }
+// calculate()
+
+// console.log("First line")
+// setTimeout(() => {
+//     console.log("After 2 sec")
+// }, 2000);
+// console.log("Second line")
+
+// setTimeout(() => {
+//     alert("Alert after 3 sec!!")
+// }, 3*1000);
+
+// const timerId=setInterval(()=>{
+//     console.log("Hello Student!")
+// },1000)
+
+// setTimeout(() => {
+//     clearInterval(timerId)
+// },10*1000)
+
+count=1
+const timerId=setInterval(()=>{
+    console.log(count)
+    count+=1
+},1000)
+
+setTimeout(() => {
+    clearInterval(timerId)
+},10*1000)
 
