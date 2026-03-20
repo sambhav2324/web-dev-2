@@ -396,19 +396,21 @@
 // console.log(gen.next())
 // console.log(gen.next())
 
-function add (a){
-    return function(b){
-        return function(c){
-            return a+b+c
-        }
-    }
-}
+// function add (a){
+//     return function(b){
+//         return function(c){
+//             return a+b+c
+//         }
+//     }
+// }
 
-// console.log(add((1)(2)(3)))
+// // console.log(add((1)(2)(3)))
 
-const first=add(1)
-const second=first(2)
-const third=second(3)
-console.log(third)
+// const first=add(1)
+// const second=first(2)
+// const third=second(3)
 // console.log(third)
+// // console.log(third)
+
+
 
