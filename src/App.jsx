@@ -1,13 +1,16 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from './assets/vite.svg'
 import heroImg from './assets/hero.png'
 import './App.css'
+import Sample from './Components/Sample'
 
 function App() {
   const [count, setCount] = useState(0)
   console.log(document)
-
+  console.log(count)
+  const name ="Sambhav"
+  console.log({2+3})
   console.log(React.createElement("div",null,"Hello World"))
 
   return (
@@ -24,12 +27,7 @@ function App() {
             Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
           </p>
         </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
+        
       </section>
 
       <div className="ticks"></div>
@@ -117,7 +115,8 @@ function App() {
 
       <div className="ticks"></div>
       <section id="spacer"></section>
-//     </>
+      <Sample count={count} setCount={setCount}/>
+     </>
    )
  }
 
