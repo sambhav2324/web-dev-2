@@ -1,45 +1,56 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 
-// function Sample({count , setCount}){
-    
-//     return (
-//         <div>
-//       <h2>Treading topics</h2>
-//       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, vero.        
-//       </p>
-//       <button
-//           className="counter"
-//           onClick={() => setCount((count) => count + 1)}
-//           >
-//           Count is {count}
-//         </button>
-//     </div>
-//   )
-// }
+function Sample(props) {
+    const [name, setName] = useState("Devendra")
+    const [age, setAge] = useState(20)
 
-class Sample extends Component{
-    constructor (props){
-        super(props)
-    }
-    render(){
-        return (
-            <div>
+    return (
+        <div>
+            <h2>Trending topics</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quae maiores, nobis laboriosam non commodi quia consequuntur vitae dolore facere deserunt quas recusandae iste harum in, provident aut reprehenderit temporibus.</p>
+            <h3>{name}</h3>
+            <button onClick={() => {
+                setName("Alex")
 
-             <h2>Treading topics</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, vero.        
-      </p>
-      <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-          >
-          Count is {count}
-        </button>
-              </div>
-        )
-    }
+            }}>Name Change</button>
+            <button
+                className="counter"
+                onClick={() => props.setCount((count) => count + 1)}
+            >
+                Count is {props.count}
+            </button>
+        </div>
+    )
 }
 
-export default Sample
-    
-    
+// class Sample extends Component {
+//     constructor(props){
+//         super(props)
+//         this.state={
+//             name:"Devendra",
+//             age:23
+//         }
+//     }
 
+//     render(){
+//         return (
+//             <div>
+//             <h2>Trending topics</h2>
+//             <h3>{this.state.name}</h3>
+//             <button onClick={()=>{
+//                 this.setState({name:"Alex"})
+
+//                 }}>Name Change</button>
+//             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem quae maiores, nobis laboriosam non commodi quia consequuntur vitae dolore facere deserunt quas recusandae iste harum in, provident aut reprehenderit temporibus.</p>
+//             <button
+//                 className="counter"
+//                 onClick={() => this.props.setCount((count) => count + 1)}
+//             >
+//                 Count is {this.props.count}
+//             </button>
+//             </div>
+//         )
+//     }
+
+// }
+export default Sample
