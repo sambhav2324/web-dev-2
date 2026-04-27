@@ -12,6 +12,9 @@ function HomePage() {
     return (
         <>
             {login ? <button onClick={() => setLogin(false)}>Logout</button> : <button onClick={() => setLogin(true)}>Login</button>}
+            <ul>
+                <li><link rel="stylesheet" href="" /></li>
+            </ul>
         </>
     )
 }
